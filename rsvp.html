@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-image-gallery.min.css">
+    <link href="index.css" rel="stylesheet">
+    <script type="text/javascript"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+<body>
+  <div class="headerRSVP">
+    <h1 class="title">RSVP for the Kelleher Wedding</h1>
+    <h4 class="title">June 9, 2018 - 2:00pm</h2>
+    <h4 class="title">Erie, Pa - Smith Chapel at Penn State Behrend and Sunset Inn</h2>
+  </div>
+  <form id ="form" method = "post">
+      <div class ="form-group">
+          <select name="attending" class="form-control">
+        <br>
+          <option value="yes">Attending</option>
+          <option value="no">Not Attending</option>
+        </select>
+      </div>
+      <div class ="form-group" id="group">
+        <label for = "numberInput">Number Attending</label>
+        <input type="number" class="form-control" name="" id="numberInput" aria-describedby="numberHelp" placeholder = "Enter Total Number Attending">
+      </div>
+        <br>
+        <input id="submitbutton" type="submit" class="form-control" value="Submit">
+      </div>
+  <form>
+    <script>
+
+    $("#numberInput").keyup(function() {
+      if($("#numberInput").val()!=count){
+      var count = $("#numberInput").val();
+          $( '.name').remove();
+      }
+
+      if(count > 0 && count < 20){
+        for(var i =0; i<count; i++){
+        $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
+        $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
+      }
+      }
+
+    });
+    </script>
+  </body>
+</html>

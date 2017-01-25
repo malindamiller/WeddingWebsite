@@ -1,0 +1,114 @@
+#indexBody{
+  background-color: #f2f2f2;
+
+}
+#rsvpButton{
+  margin-left: 1%;
+}
+
+#link {
+  color: #adccff;
+}
+.headerIndex {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('images/ring.jpg')
+}
+.cursive {
+  padding: 15%;
+  font-family: 'Cedarville Cursive', cursive;
+  text-align: center;
+  color: white;
+  font-size: 6vw;
+}
+
+#story {
+  padding: 10px;
+  margin-left: 3px;
+}
+
+#links {
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+.whiteHeader {
+  padding: 2%;
+  font-family: 'Cedarville Cursive', cursive;
+  text-align: center;
+  color: white;
+  font-size: 270%;
+}
+.blueHeader {
+  padding: 1%;
+  font-family: 'Cedarville Cursive', cursive;
+  text-align: center;
+  color: #29487a;
+  font-size: 270%;
+}
+.blueDiv{
+  background-color: #29487a;
+  float: right;
+  position: absolute;
+}
+
+.blueDivNoFloat{
+  padding: 10px;
+  background-color: #29487a;
+}
+.i {
+  float: left;
+}
+.whiteDivFloat{
+  clear: both
+}
+.weddingPartyImage {
+  width: 30%;
+  /*padding-left: 2%;*/
+  border-radius: 50%;
+  float: left;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+#storyFont {
+  font-size: 50%;
+  font-family: cursive;
+  color: #29487a;
+  padding: 2px;
+  margin: 3px;
+}
+.bridesmaidFont {
+  margin-left: 1%;
+  font-family: 'Cedarville Cursive', cursive;
+  text-align: left;
+  color: white;
+  font-size: 200%;
+}
+
+#bridesmaidText{
+  font-size: 120%;
+  font-family: cursive;
+  color: white;
+  padding: 2%;
+  float: left;
+  /*position: relative;*/
+}
+.headerRSVP {
+  padding-left: 10%;
+  padding-bottom: 2%;
+}
+.title {
+
+  color: #29487a;
+
+}
+#submitbutton{
+  background-color: #29487a;
+  color: white;
+}
+form {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#nameInput {
+  width: 30%
+}
