@@ -6,32 +6,28 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var RSVP = require ('./RSVP.js');
 
-app.use( bodyParser.json() );
+app.use(bodyParser.json());
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-
-app.use("/images", express.static(__dirname + '/images'));
-app.use("/bootstrap", express.static(__dirname + '/bootstrap'));
-app.use("/index.css", express.static(__dirname + '/index.css'));
 
 var url = 'mongodb://localhost:27017/Wedding'
 mongoose.connect(url);
 
 app.get('/', function (req, res) {
-   res.sendFile(path.join(__dirname + '/index.html'));
+   res.sendFile('index.html');
 })
 app.get('/rsvp', function (req, res) {
-   res.sendFile(path.join(__dirname + '/rsvp.html'));
+   res.sendFile(path.join(__dirname + '/public/rsvp.html'));
 })
 app.get('/admin', function (req, res) {
-   res.sendFile(path.join(__dirname + '/admin.html'));
+   res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
 app.get('/getRSVP', function (req, res) {
   RSVP.find({}, function(err, users) {
   if (err)
     throw err;
-  console.log(JSON.stringify(users));
   res.send(users);
 });
 })
@@ -46,12 +42,12 @@ app.post('/rsvp', function (req, res) {
        return next(err);
      }
    })
-   res.sendFile(path.join(__dirname + '/confirm.html'));
+   res.sendFile(path.join(__dirname + '/public/confirm.html'));
 })
 
 var server = app.listen(8081, function () {
-   var host = server.address().address
-   var port = server.address().port
+var host = server.address().address
+var port = server.address().port
 
-   console.log("app listening at http://%s:%s", host, port)
+console.log("app listening at http://%s:%s", host, port)
 })

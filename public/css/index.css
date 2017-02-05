@@ -12,7 +12,7 @@
 .headerIndex {
   background-repeat: no-repeat;
   background-size: 100%;
-  background-image: url('images/ring.jpg')
+  background-image: url('../images/ring.jpg')
 }
 .cursive {
   padding: 15%;
