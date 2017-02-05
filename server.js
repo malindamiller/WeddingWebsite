@@ -24,7 +24,17 @@ app.get('/', function (req, res) {
 app.get('/rsvp', function (req, res) {
    res.sendFile(path.join(__dirname + '/rsvp.html'));
 })
-
+app.get('/admin', function (req, res) {
+   res.sendFile(path.join(__dirname + '/admin.html'));
+})
+app.get('/getRSVP', function (req, res) {
+  RSVP.find({}, function(err, users) {
+  if (err)
+    throw err;
+  console.log(JSON.stringify(users));
+  res.send(users);
+});
+})
 app.post('/rsvp', function (req, res) {
    var rsvp = new RSVP({
      name: req.body.name,

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <link href="index.css" rel="stylesheet">
+    </script>
+    <script>
+      var myApp = angular.module('wedding', []);
+      myApp.controller('admin', function($scope, $http) {
+        $scope.rsvpList =[];
+        $scope.getRSVP = function() {
+          $http({
+              method: 'GET',
+              url: '/getRSVP'
+            }).then(function successCallback(res) {
+              for(var i = 0; i < res.data.length; i++) {
+                var rsvp = res.data[i];
+                $scope.rsvpList.push(rsvp);
+              }
+              }, function errorCallback(response) {
+                console.log("error " + response);
+              });
+          }
+      });
+    </script>
+  </head>
+  <body ng-app="wedding" >
+    <h1>Guests that have RSVP'd</h1>
+    <div ng-controller="admin" ng-init="getRSVP()">
+      {{rsvpList}}
+    </div>
+  </body>
+</html>
