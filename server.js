@@ -37,7 +37,6 @@ app.post('/rsvp', function (req, res) {
      attending: req.body.attending,
      count: req.body.count
    });
-   console.log("ATTEND" + req.body.attending);
 
    rsvp.save(function (err, rsvp) {
      if(err) {
