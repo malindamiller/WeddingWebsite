@@ -3,7 +3,8 @@ var Schema = mongoose.Schema;
 
 var rsvpSchema = new Schema({
   name: Array,
-  attending: Boolean,
+  attending: String,
+  count: Number
 });
 
 var RSVP = mongoose.model('RSVP', rsvpSchema);

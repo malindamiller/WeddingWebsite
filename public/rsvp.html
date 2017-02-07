@@ -15,36 +15,35 @@
   </div>
   <form id ="form" method = "post">
       <div class ="form-group">
-          <select name="attending" class="form-control">
+          <select name="attending" id="attending" class="form-control">
         <br>
-          <option value="yes">Attending</option>
-          <option value="no">Not Attending</option>
+          <option value="Attending">Attending</option>
+          <option value="Not Attending">Not Attending</option>
         </select>
       </div>
       <div class ="form-group" id="group">
         <label for = "numberInput">Number Attending</label>
-        <input type="number" class="form-control" name="" id="numberInput" aria-describedby="numberHelp" placeholder = "Enter Total Number Attending">
+        <input type="number" class="form-control" name="count" id="numberInput" aria-describedby="numberHelp" placeholder = "Enter Total Number Attending">
       </div>
         <br>
         <input id="submitbutton" type="submit" class="form-control" value="Submit">
       </div>
   <form>
-    <script>
+  <script>
+      $("#numberInput").keyup(function() {
+        if($("#numberInput").val()!=count){
+        var count = $("#numberInput").val();
+            $( '.name').remove();
+        }
 
-    $("#numberInput").keyup(function() {
-      if($("#numberInput").val()!=count){
-      var count = $("#numberInput").val();
-          $( '.name').remove();
-      }
+        if(count > 0 && count < 20){
+          for(var i =0; i<count; i++){
+          $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
+          $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
+        }
+        }
 
-      if(count > 0 && count < 20){
-        for(var i =0; i<count; i++){
-        $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
-        $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
-      }
-      }
-
-    });
+      });
     </script>
   </body>
 </html>

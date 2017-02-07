@@ -7,6 +7,7 @@
       var myApp = angular.module('wedding', []);
       myApp.controller('admin', function($scope, $http) {
         $scope.rsvpList =[];
+        $scope.totalAttending = 0;
         $scope.getRSVP = function() {
           $http({
               method: 'GET',
@@ -15,6 +16,10 @@
               for(var i = 0; i < res.data.length; i++) {
                 var rsvp = res.data[i];
                 $scope.rsvpList.push(rsvp);
+
+                if(rsvp.attending =="Attending"){
+                  $scope.totalAttending += rsvp.count;
+                }
               }
               }, function errorCallback(response) {
                 console.log("error " + response);
@@ -26,7 +31,12 @@
   <body ng-app="wedding" >
     <h1>Guests that have RSVP'd</h1>
     <div ng-controller="admin" ng-init="getRSVP()">
-      {{rsvpList}}
+      <div ng-repeat="rsvp in rsvpList">
+        {{rsvp.attending}} {{rsvp.count}}
+        <div ng-repeat="n in rsvp.name">{{n}}</h1>
+      </div>
+      <hr>
     </div>
+    <h2>Total: {{totalAttending}}</h2>
   </body>
 </html>
