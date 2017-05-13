@@ -8,8 +8,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://malsup.github.com/jquery.corner.js"></script>
-    <script type="text/javascript">
-    </script>
+    <script type="text/javascript"></script>
   </head>
   <body id="indexBody">
     <div class = "headerIndex">
@@ -37,11 +36,53 @@
       We are excited to spend our lives together!</p>
     </div>
     <div class = "blueDivNoFloat" style = "clear: both">
-      <h2 class = "whiteHeader">Wedding Details<h2>
-      <button id="rsvpButton"><a  href = '/rsvp'>RSVP</a></button>
-      <h2 class = "bridesmaidFont">When: June 9, 2018<h2>
-      <h2 class = "bridesmaidFont">Ceremony: <a id ="link" target="_blank" href = "https://www.google.com/maps/place/The+Smith+Chapel/@42.1198577,-79.9819211,17z/data=!3m1!4b1!4m5!3m4!1s0x882d7df323fbd723:0x7e3777e926214f68!8m2!3d42.1198577!4d-79.9797324">Smith Chapel at Penn State Behrend</a><h2>
-      <h2 class = "bridesmaidFont">Reception: <h2>
+        <h2 class = "whiteHeader">Wedding Details</h2>
+        <h2 class = "whiteHeader">Ceremony</h2>
+      <div class="map">
+        <div class="addressDiv">
+          <h3 class="address">June 9, 2018 - 4:00pm</h3>
+          <h3 class="address"><a id ="link" target="_blank" href = "https://www.google.com/maps/place/The+Smith+Chapel/@42.1198577,-79.9819211,17z/data=!3m1!4b1!4m5!3m4!1s0x882d7df323fbd723:0x7e3777e926214f68!8m2!3d42.1198577!4d-79.9797324">Smith Chapel at Penn State Behrend</a><h2>
+          <h4 class="address">4701 College Dr</h4>
+          <h4 class="address">Erie, PA 16563</h4>
+        </div>
+        <img src="images/smithChapel.jpg" style="height: 50%">
+        <iframe src="//www.google.com/maps/embed/v1/place?q=The+smith+chapel,+Erie+PA
+          &zoom=12
+          &key=AIzaSyCRo51Woi8bbRWcxcfR5rO4uKgCpZ7zOxE">
+        </iframe>
+      </div>
+      <h2 class = "whiteHeader">Reception</h2>
+      <div class="map">
+        <div class="addressDiv">
+          <h3 class="address">June 9, 2018 - 6:00pm</h3>
+          <h3 class = "address"><a id ="link" target="_blank" href = "https://www.google.com/maps/place/Sunset+Inn/@42.1523675,-80.046311,17z/data=!3m1!4b1!4m5!3m4!1s0x882d7e50cb4091bd:0xc52e65dbbd560a1a!8m2!3d42.1523635!4d-80.0441223">Sunset Inn</a><h2>
+          <h4 class="address">1990 Lakeside Dr</h4>
+          <h4 class="address">Erie, PA 16511</h4>
+        </div>
+        <img src="images/sunsetInn.jpg" style="height: 50%; width: 35%">
+        <iframe src="//www.google.com/maps/embed/v1/place?q=The+sunset+inn,+Erie+PA
+          &zoom=12
+          &key=AIzaSyCRo51Woi8bbRWcxcfR5rO4uKgCpZ7zOxE">
+        </iframe>
+      </div>
+      <div class="headerRSVP">
+        <h1 class="title">RSVP for the Kelleher Wedding</h1>
+      </div>
+      <form id ="form" action = "rsvp" method = "post">
+          <div class ="form-group">
+              <select name="attending" id="attending" class="form-control">
+            <br>
+              <option value="Attending">Attending</option>
+              <option value="Not Attending">Not Attending</option>
+            </select>
+          </div>
+          <div class ="form-group" id="group">
+            <input type="number" class="form-control" name="count" id="numberInput" aria-describedby="numberHelp" placeholder = "Enter Total Number Attending">
+          </div>
+            <br>
+            <input id="submitbutton" type="submit" class="form-control" value="Submit">
+      <form>
+      <h3 id="confirm"><h3>
    </div>
    <div id="blueimp-gallery" class="blueimp-gallery">
       <!-- The container for the modal slides -->
@@ -78,32 +119,77 @@
     </div>
     <h1 class = "blueHeader">Photos</h1>
     <div id="links">
+      <a href="images/Final1.jpg" title="" data-gallery>
+          <img src="images/Final1.jpg" alt="one" style= "width: 14%">
+      </a>
+      <a href="images/Final3.jpg" title="" data-gallery>
+          <img src="images/Final3.jpg" alt="two" style= "width: 14%">
+      </a>
+      <a href="images/Final4.jpg" title="" data-gallery>
+          <img src="images/Final4.jpg" alt="three" style= "width: 11%">
+      </a>
+      <a href="images/Final6.jpg" title="" data-gallery>
+          <img src="images/Final6.jpg" alt="four" style= "width: 14%">
+      </a>
+      <a href="images/Final15.jpg" title="" data-gallery>
+          <img src="images/Final15.jpg" alt="five" style= "width: 14%">
+      </a>
+      <a href="images/Final7.jpg" title="" data-gallery>
+          <img src="images/Final7.jpg" alt="two" style= "width: 14%">
+      </a>
+      <a href="images/Final8.jpg" title="" data-gallery>
+          <img src="images/Final8.jpg" alt="three" style= "width: 14%">
+      </a>
+      <a href="images/Final10-2.jpg" title="" data-gallery>
+          <img src="images/Final10-2.jpg" alt="four" style= "width: 14%">
+      </a>
+      <a href="images/Final11-2.jpg" title="" data-gallery>
+          <img src="images/Final11-2.jpg" alt="five" style= "width: 14%">
+      </a>
+      <a href="images/Final12.jpg" title="" data-gallery>
+          <img src="images/Final12.jpg" alt="three" style= "width: 14%">
+      </a>
+      <a href="images/Final5.jpg" title="" data-gallery>
+          <img src="images/Final5.jpg" alt="three" style= "width: 14%">
+      </a>
+      <a href="images/Final13.jpg" title="" data-gallery>
+          <img src="images/Final13.jpg" alt="four" style= "width: 14%">
+      </a>
+      <a href="images/Final12.jpg" title="" data-gallery>
+          <img src="images/Final12.jpg" alt="five" style= "width: 14%">
+      </a>
+      <a href="images/engagement.jpg" title="Hibachi for Valentines Day" data-gallery>
+          <img src="images/engagement.jpg" alt="nine" style= "width: 14%">
+      </a>
+      <a href="images/niagara.jpg" title="Niagara Falls" data-gallery>
+          <img src="images/niagara.jpg" alt="six" style= "width: 14%">
+      </a>
         <a href="images/formal.jpg" title="Lion Ambassador Formal" data-gallery>
-            <img src="images/formal.jpg" alt="one" style= "width: 11%">
+            <img src="images/formal.jpg" alt="one" style= "width: 14%">
         </a>
         <a href="images/software.jpg" title="My Heart belongs to a Software Developer" data-gallery>
-            <img src="images/software.jpg" alt="two" style= "width: 11%">
+            <img src="images/software.jpg" alt="two" style= "width: 14%">
         </a>
         <a href="images/olmstead.jpg" title="Olmstead Point in Yosemite National Park" data-gallery>
-            <img src="images/olmstead.jpg" alt="three" style= "width: 11%">
+            <img src="images/olmstead.jpg" alt="three" style= "width: 14%">
         </a>
         <a href="images/kiss.jpg" title="Graduation from Penn State Behrend" data-gallery>
-            <img src="images/kiss.jpg" alt="four" style= "width: 11%">
+            <img src="images/kiss.jpg" alt="four" style= "width: 14%">
         </a>
         <a href="images/cuddles.jpg" title="Christmas 2016" data-gallery>
-            <img src="images/cuddles.jpg" alt="five" style= "width: 11%">
+            <img src="images/cuddles.jpg" alt="five" style= "width: 14%">
         </a>
         <a href="images/niagara.jpg" title="Niagara Falls" data-gallery>
-            <img src="images/niagara.jpg" alt="six" style= "width: 11%">
+            <img src="images/niagara.jpg" alt="six" style= "width: 14%">
         </a>
         <a href="images/psu.jpg" title="Penn State student section" data-gallery>
-            <img src="images/psu.jpg" alt="seven" style= "width: 11%">
+            <img src="images/psu.jpg" alt="seven" style= "width: 14%">
         </a>
         <a href="images/bulls.jpg" title="Durham Bulls AAA baseball" data-gallery>
-            <img src="images/bulls.jpg" alt="eight" style= "width: 11%">
+            <img src="images/bulls.jpg" alt="eight" style= "width: 14%">
         </a>
         <a href="images/restaurant.jpg" title="Hibachi for Valentines Day" data-gallery>
-            <img src="images/restaurant.jpg" alt="nine" style= "width: 11%">
+            <img src="images/restaurant.jpg" alt="nine" style= "width: 14%">
         </a>
     </div>
     <div class = "blueDiv">
@@ -116,24 +202,35 @@
             <p>
             <br>
             <h2 class = "bridesmaidFont">Kate Hill - Bridesmaid</h2>
-            <p id = "bridesmaidText">  <img class = "weddingPartyImage" src = "images/kate.jpg"><img>Kate is the brides cousin.  ac viverra metus. Integer id dictum velit. Proin eget sem in neque laoreet porttitor
-            Aliquam sed lacinia lorem, vitae rhoncus est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Vivamus ex eros, ultrices sit amet congue vel, vestibulum vitae risus. Curabitur blandit malesuada ex tempor consectetur.
+            <p id = "bridesmaidText">  <img class = "weddingPartyImage" src = "images/kate.jpg"><img>Hi my name is Kaitlyn and I am Malinda's cousin! I currently live in Connecticut with my fiancé Bob and am working as a preschool teacher.
+              Minda has been one of my best friends since I was little. We have been through everything together, always having the other one to talk to. She has been the one I would go to for support, gossip, laughter, or to complain.
+              Through high school and college we always called and FaceTimed each other with important news even though we never went to the same school. Now that she is getting married some things have changed.
+              We both have a man in our lives that takes up a lot of our time and attention but even with that we have remain close.
+              Austin and Minda's relationship is one of a kind. The kind of love that you always wish for your best friend. He's a little weird, she's a little weird and they fit together perfectly! Now I get to stand up with her and support her as she promises to love and cherish Austin forever.
+              I am extremely lucky to have her as my cousin and he will be extremely bless to have her as his wife. "
             <p>
 
             <br>
             <h2 class = "bridesmaidFont">Meg Hill - Bridesmaid</h2>
-            <p id = "bridesmaidText">  <img class = "weddingPartyImage" src = "images/meg.jpg"><img>Meg is the brides cousin.  ac viverra metus. Integer id dictum velit. Proin eget sem in neque laoreet porttitor
-            Aliquam sed lacinia lorem, vitae rhoncus est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Vivamus ex eros, ultrices sit amet congue vel, vestibulum vitae risus. Curabitur blandit malesuada ex tempor consectetur.
-            Phasellus tellus nibh, commodo sed vehicula sed oreet est, ac viverra metus. <p>
+            <p id = "bridesmaidText">  <img class = "weddingPartyImage" src = "images/meg.jpg"><img>Hi!!  My name is Meghan Hill and I’m from Greensburg, PA. I am Malinda’s cousin! Growing up having only two cousins (Malinda and Rachel), some may say we missed out on having a big family.
+              But to me, I feel like that has made us even closer. Ever since we were really little, Malinda and I have been like best friends. Cousins are meant to be best friends, and that’s how it has always been. We would always have fun when we were goofing off at Granny’s and
+              getting called ‘brats’ for just being too silly or when we were playing ‘house’. And when it was time to leave, we would all make a mess so we would have to stay longer to clean it all up. Some of our other best memories come from tailgating and going to Penn State games!
+              That is the main thing that brings our whole family together every weekend in the fall and I love that. I know the turning point for our friendship, to me, was when we went on the 60 mile Dam Ride together for the first time. We were still kind of young and it was one of the first times that we were going somewhere not as a group of cousins and
+              I was worried because we usually never spent that much time without our sisters. But that day was one of the best memories I have with Malinda, because the entire trip, we were laughing and joking around, and just having the most fun in the world. From then on, we looked forward to that bike ride every year with Pap Pap, and they always were a great time together.
+              At any family event, I am always waiting until Malinda and her family get there, because once we are all together, we just have a blast! Malinda is by far one of my very best friends and I love her so much. To be a part of this day with her is definitely a blessing.
+              We have always said that we will be in each other’s weddings when the days come, and now it is actually happening!
+              I am so happy that she has found the man of her dreams who makes her happy and treats her the way she deserves, because she deserves the best!
+              I cannot wait for this special day and to celebrate with Malinda and Austin! I love you guys and Congratulations!!  <p>
 
             <br>
             <h2 class = "bridesmaidFont">Amy Dewoody - Bridesmaid</h2>
-            <p id = "bridesmaidText">  <img class = "weddingPartyImage" src = "images/amy.jpg"><img>Amy is the bride's best friend from college and her freshman roommate. ac viverra metus. Integer id dictum velit. Proin eget sem in neque laoreet porttitor
-            Aliquam sed lacinia lorem, vitae rhoncus est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Vivamus ex eros, ultrices sit amet congue vel, vestibulum vitae risus. Curabitur blandit malesuada ex tempor consectetur.
-            Phasellus tellus nibh, commodo sed vehicula sed oreet est, ac viverra metus. Integer id dictum velit. Proin eget sem in neque laoreet porttitor
+            <p id = "bridesmaidText">  <img class = "weddingPartyImage" src = "images/amy.jpg"><img>Hello my name is Amy and I am from Saegertown, PA where I work as an electrical engineer at a power distribution company.
+              I met Minda at Behrend when we were assigned as random roommates our freshman year in 2012. I credit my success at college to Minda because she exemplifies both a good student and an even better friend.
+              The initial adjustment to school was rocky, but more importantly, the amount of times we cried, ate ice cream, and shared dog pictures was the saving grace I needed to graduate.
+              I haven't met a better person. Even though we don't live in the same apartment, or even the same state, I cherish the memories made in apt. 808, and look forward to celebrating our friendship more, no matter how far away we are.
+              Although I knew Austin, I couldn't truly appreciate who he was until we were associated through Minda. Thank you, Austin, for encouraging, supporting, and loving my best friend. Your love has set the bar high, for it is evident in the smallest
+              of things, like your playful demeanor. I admire your drive and your passion for Minda and your work is inspiring. I am confident you two have a lifetime of happiness filled with coding, milkshakes, health, and love.
+              I am thankful for the influence you both have had on me, and am honored to be a part of your day.
           </p>
 
             <br>
@@ -157,6 +254,26 @@
           links = this.getElementsByTagName('a');
       blueimp.Gallery(links, options);
   };
+  $("#numberInput").keyup(function() {
+    if($("#numberInput").val()!=count){
+    var count = $("#numberInput").val();
+        $( '.name').remove();
+    }
+
+    if(count > 0 && count < 20){
+      for(var i =0; i<count; i++){
+        $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
+        $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name', placeholder: "Attendee Name"}).appendTo('#group');
+      }
+    }
+  });
+  $("#form").submit(function() {
+    $.post("/rsvp", $("#form").serialize())
+    .done(function(data) {
+      $('#confirm').html("Your RSVP has been submitted, Thank you!");
+    });
+    return false;
+  });
 </script>
 
 </body>

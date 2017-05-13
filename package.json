@@ -1,0 +1,25 @@
+{
+  "name": "wedding-website",
+  "version": "1.0.0",
+  "description": "Kelleher Wedding Website",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malindamiller/WeddingWebsite.git"
+  },
+  "author": "Malinda Miller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malindamiller/WeddingWebsite/issues"
+  },
+  "homepage": "https://github.com/malindamiller/WeddingWebsite#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.8"
+  }
+}

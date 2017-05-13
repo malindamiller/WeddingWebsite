@@ -21,6 +21,10 @@
   color: white;
   font-size: 6vw;
 }
+.address {
+  padding-left: 5%;
+  color: white;
+}
 
 #story {
   padding: 10px;
@@ -71,9 +75,10 @@
 }
 #storyFont {
   font-size: 50%;
-  font-family: cursive;
   color: #29487a;
-  padding: 2px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2px;
   margin: 3px;
 }
 .bridesmaidFont {
@@ -86,7 +91,6 @@
 
 #bridesmaidText{
   font-size: 120%;
-  font-family: cursive;
   color: white;
   padding: 2%;
   float: left;
@@ -97,13 +101,20 @@
   padding-bottom: 2%;
 }
 .title {
-
-  color: #29487a;
+  text-align: center;
+  color: white;
 
 }
-#submitbutton{
-  background-color: #29487a;
+.map {
+  margin-left: 10%;
+  display: flex
+}
+#confirm {
   color: white;
+}
+#submitbutton{
+  background-color: white;
+  color: #29487a;
 }
 form {
   padding-left: 10%;

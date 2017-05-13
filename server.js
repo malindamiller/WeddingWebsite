@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-var url = 'mongodb://localhost:27017/Wedding'
+var url = 'mongodb://localhost:27017/Wedding';
 mongoose.connect(url);
 
 app.get('/', function (req, res) {
