@@ -1,3 +1,20 @@
+ul {
+  background-color: blue
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+  color: white;
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style-type: none;
+}
+.headerlink {
+}
 #indexBody{
   background-color: #f2f2f2;
 
@@ -25,8 +42,11 @@
   padding-left: 5%;
   color: white;
 }
-
+#photos {
+  padding-top: 52px;
+}
 #story {
+  padding-top: 25px;
   padding: 10px;
   margin-left: 3px;
 }
@@ -65,6 +85,9 @@
 .whiteDivFloat{
   clear: both
 }
+#bridalParty{
+  padding-top: 55px;
+}
 .weddingPartyImage {
   width: 30%;
   /*padding-left: 2%;*/
@@ -72,6 +95,9 @@
   float: left;
   padding-right: 5%;
   padding-left: 5%;
+}
+#weddingDetails {
+  padding-top: 55px;
 }
 #storyFont {
   font-size: 50%;
@@ -96,7 +122,8 @@
   float: left;
   /*position: relative;*/
 }
-.headerRSVP {
+#headerRSVP {
+  padding-top: 5%;
   padding-left: 10%;
   padding-bottom: 2%;
 }
@@ -106,6 +133,7 @@
 
 }
 .map {
+  flex-wrap: wrap;
   margin-left: 10%;
   display: flex
 }
@@ -122,4 +150,44 @@ form {
 }
 #nameInput {
   width: 30%
+}
+.image_map_holder{
+  display: flex;
+  width: 70%;
+}
+.addressDiv {
+  width: 30%
+}
+header {
+    background-color: #29487a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 100;
+    height: 35px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    min-width: 675px;
+    border:1px solid #29487a;
+    border-width:1px 0;
+    border-bottom: 1px solid #dbdddf;
+    box-shadow: 0 0 0.7em rgba(0,5,10,0.15)
+}
+header a {
+  color: #fff;
+}
+@media all and (max-width: 840px) {
+  .map {
+    flex-flow:column wrap;
+  }
+  .image_map_holder{
+    flex-flow:column wrap;
+  }
+  .addressDiv {
+    width: 100% !important;
+  }
+  .address {
+    width: 100% !important;
+  }
 }

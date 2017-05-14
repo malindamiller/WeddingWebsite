@@ -11,6 +11,15 @@
     <script type="text/javascript"></script>
   </head>
   <body id="indexBody">
+    <header id="navigation">
+      <ul>
+        <li><a class="headerlink" href="#headerRSVP">RSVP</a></li>
+        <li><a href="#weddingDetails">Wedding Details</a></li>
+        <li><a href="#photos">Engagement Photos</a></li>
+        <li><a href="#bridalParty">Bridal Party</a></li>
+        <li><a href="#story">Our Story</a></li>
+      </ul>
+    </header>
     <div class = "headerIndex">
       <h1 class = "cursive">Austin & Malinda <h1>
     </div>
@@ -36,36 +45,40 @@
       We are excited to spend our lives together!</p>
     </div>
     <div class = "blueDivNoFloat" style = "clear: both">
-        <h2 class = "whiteHeader">Wedding Details</h2>
+        <h2 id = "weddingDetails" class = "whiteHeader">Wedding Details</h2>
         <h2 class = "whiteHeader">Ceremony</h2>
       <div class="map">
         <div class="addressDiv">
           <h3 class="address">June 9, 2018 - 4:00pm</h3>
           <h3 class="address"><a id ="link" target="_blank" href = "https://www.google.com/maps/place/The+Smith+Chapel/@42.1198577,-79.9819211,17z/data=!3m1!4b1!4m5!3m4!1s0x882d7df323fbd723:0x7e3777e926214f68!8m2!3d42.1198577!4d-79.9797324">Smith Chapel at Penn State Behrend</a><h2>
-          <h4 class="address">4701 College Dr</h4>
+          <h4 class="address">4701 College Drive</h4>
           <h4 class="address">Erie, PA 16563</h4>
         </div>
-        <img src="images/smithChapel.jpg" style="height: 50%">
-        <iframe src="//www.google.com/maps/embed/v1/place?q=The+smith+chapel,+Erie+PA
-          &zoom=12
-          &key=AIzaSyCRo51Woi8bbRWcxcfR5rO4uKgCpZ7zOxE">
-        </iframe>
+        <div class="image_map_holder">
+          <img src="images/smithChapel.jpg" style="height: 57%">
+          <iframe src="//www.google.com/maps/embed/v1/place?q=The+smith+chapel,+Erie+PA
+            &zoom=12
+            &key=AIzaSyCRo51Woi8bbRWcxcfR5rO4uKgCpZ7zOxE">
+          </iframe>
+        </div>
       </div>
       <h2 class = "whiteHeader">Reception</h2>
       <div class="map">
         <div class="addressDiv">
           <h3 class="address">June 9, 2018 - 6:00pm</h3>
           <h3 class = "address"><a id ="link" target="_blank" href = "https://www.google.com/maps/place/Sunset+Inn/@42.1523675,-80.046311,17z/data=!3m1!4b1!4m5!3m4!1s0x882d7e50cb4091bd:0xc52e65dbbd560a1a!8m2!3d42.1523635!4d-80.0441223">Sunset Inn</a><h2>
-          <h4 class="address">1990 Lakeside Dr</h4>
+          <h4 class="address">1990 Lakeside Drive</h4>
           <h4 class="address">Erie, PA 16511</h4>
         </div>
-        <img src="images/sunsetInn.jpg" style="height: 50%; width: 35%">
-        <iframe src="//www.google.com/maps/embed/v1/place?q=The+sunset+inn,+Erie+PA
-          &zoom=12
-          &key=AIzaSyCRo51Woi8bbRWcxcfR5rO4uKgCpZ7zOxE">
-        </iframe>
+        <div class="image_map_holder">
+          <img src="images/sunsetInn.jpg">
+          <iframe src="//www.google.com/maps/embed/v1/place?q=The+sunset+inn,+Erie+PA
+            &zoom=12
+            &key=AIzaSyCRo51Woi8bbRWcxcfR5rO4uKgCpZ7zOxE">
+          </iframe>
+        </div>
       </div>
-      <div class="headerRSVP">
+      <div id="headerRSVP">
         <h1 class="title">RSVP for the Kelleher Wedding</h1>
       </div>
       <form id ="form" action = "rsvp" method = "post">
@@ -117,7 +130,7 @@
           </div>
       </div>
     </div>
-    <h1 class = "blueHeader">Photos</h1>
+    <h1 id="photos" class = "blueHeader">Photos</h1>
     <div id="links">
       <a href="images/Final1.jpg" title="" data-gallery>
           <img src="images/Final1.jpg" alt="one" style= "width: 14%">
@@ -193,12 +206,15 @@
         </a>
     </div>
     <div class = "blueDiv">
-      <h2 class = "whiteHeader">Wedding Party<h2>
+      <h2 id="bridalParty" class = "whiteHeader">Wedding Party<h2>
           <h2 class = "bridesmaidFont">Rachel Miller - Maid of Honor</h2>
 
-            <p id = "bridesmaidText">  <img class = "weddingPartyImage" src = "images/rachel.jpg"><img>Rachel is the bride's little sister.  ac viverra metus. Integer id dictum velit. Proin eget sem in neque laoreet porttitor
-            Aliquam sed lacinia lorem, vitae rhoncus est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Vivamus ex eros, ultrices sit amet congue vel, vestibulum vitae risus. Curabitur blandit malesuada ex tempor consectetur.
+            <p id = "bridesmaidText">  <img class = "weddingPartyImage" src = "images/rachel.jpg">I've known Malinda a while now- roughly 21 years. We spent our entire lives as best friends- playing house with Beanie Babies, catching salamanders, running around with the dog, and it felt like we were fighting more than we got along.  I would lock my room and she would lay outside the door and beg me to
+              let her in so she could be entertained, or she would boss me around until I screamed and we both got in trouble. Despite all the fights, we always got over it, sometimes with the help of a note passed between our closets as a peace offering (they shared a wall).  I always wanted to be like her, angry I couldn't play softball or be good at math like she was.  We looked like twins (she hated it)
+               and I had to go to school being “Malinda's sister”, learning to respond to her name too.  She was a tough act to follow, so it's probably a good thing we never went to the same campus for college! It was odd when she went to Behrend, when we had to get used to being apart, and she didn't really like being in college either.  That changed when she met Austin, and he's pretty cool.  When I first met him,
+                all he did was make fun of me and make fun of Malinda, so I think he's perfect for her.  He would point out things we both said, or mannerisms we both had, proving how similar we were.  They're both into computers and stuff and I know they're always going to make each other happy, so that makes me pretty happy too.  It's not easy being 7 hours away from her, but as long as
+                Austin is there to mock her for me, I know I don't have anything to worry about.  She's still my cool sister, but soon
+                I'll have a brother too, and that makes me the lucky one.
             <p>
             <br>
             <h2 class = "bridesmaidFont">Kate Hill - Bridesmaid</h2>

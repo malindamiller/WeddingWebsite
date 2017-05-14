@@ -21,5 +21,9 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "mongoose": "^4.9.8"
+  },
+  "devDependencies": {
+    "eslint-config-semistandard": "^11.0.0",
+    "standard": "^10.0.2"
   }
 }

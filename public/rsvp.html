@@ -32,15 +32,15 @@
   <script>
       $("#numberInput").keyup(function() {
         if($("#numberInput").val()!=count){
-        var count = $("#numberInput").val();
-            $( '.name').remove();
+          var count = $("#numberInput").val();
+          $( '.name').remove();
         }
 
         if(count > 0 && count < 20){
           for(var i =0; i<count; i++){
-          $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
-          $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
-        }
+            $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
+            $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
+          }
         }
 
       });
