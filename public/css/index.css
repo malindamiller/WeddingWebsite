@@ -1,3 +1,24 @@
+@media (max-width: 840px) {
+  .map {
+    flex-flow:column wrap;
+  }
+  .image_map_holder{
+    flex-flow:column wrap;
+  }
+  .addressDiv {
+    width: 100% !important;
+  }
+  .address {
+    width: 100% !important;
+  }
+  #storyFont {
+    font-size: 85% !important;
+  }
+  #bridesmaidText {
+    font-size: 200%;
+  }
+}
+
 ul {
   background-color: blue
     margin: 0;
@@ -176,18 +197,4 @@ header {
 }
 header a {
   color: #fff;
-}
-@media all and (max-width: 840px) {
-  .map {
-    flex-flow:column wrap;
-  }
-  .image_map_holder{
-    flex-flow:column wrap;
-  }
-  .addressDiv {
-    width: 100% !important;
-  }
-  .address {
-    width: 100% !important;
-  }
 }
