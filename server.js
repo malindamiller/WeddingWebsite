@@ -12,9 +12,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-const dbName = 'Wedding';
-const host = process.env.MONGOLAB_URI || 'mongodb://localhost:27017';
-const uri = `${host}/${dbName}`;
+const uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/Wedding';
+console.log('Mongo URI: ', uri);
 
 mongoose.connect(uri);
 
