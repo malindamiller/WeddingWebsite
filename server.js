@@ -12,8 +12,11 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-var url = 'mongodb://localhost:27017/Wedding';
-mongoose.connect(url);
+const dbName = 'Wedding';
+const host = process.env.MONGOLAB_URI || 'mongodb://localhost:27017';
+const uri = `${host}/${dbName}`;
+
+mongoose.connect(uri);
 
 app.get('/', function (req, res) {
   res.sendFile('index.html');
