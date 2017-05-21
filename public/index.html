@@ -8,6 +8,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://malsup.github.com/jquery.corner.js"></script>
+     <meta name="viewport" content="width=device-width">
     <script type="text/javascript"></script>
   </head>
   <body id="indexBody">
@@ -20,6 +21,13 @@
         <li><a href="#story">Our Story</a></li>
       </ul>
     </header>
+  <!-- <div class="topnav" id="myTopnav">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div> -->
     <div class = "headerIndex">
       <h1 class = "cursive">Austin & Malinda <h1>
     </div>
@@ -289,6 +297,14 @@
     });
     return false;
   });
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
 </script>
 
 </body>

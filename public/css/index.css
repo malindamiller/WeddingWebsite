@@ -15,8 +15,15 @@
     font-size: 85% !important;
   }
   #bridesmaidText {
-    font-size: 200%;
+    font-size: 250%;
   }
+  .blueHeader{
+    font-size: 370%
+  }
+  .whiteHeader{
+    font-size: 370%;
+  }
+
 }
 
 ul {
