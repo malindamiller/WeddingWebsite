@@ -2,9 +2,9 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var bodyParser = require('body-parser')
-var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var RSVP = require('./RSVP.js');
+const sanitize = require('mongo-sanitize');
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
@@ -35,10 +35,16 @@ app.get('/getRSVP', function (req, res) {
   });
 });
 app.post('/rsvp', function (req, res) {
+  let { name, attending, count } = req.body || {};
+
+  name = sanitize(name);
+  attending = sanitize(attending);
+  count = sanitize(count);
+
   var rsvp = new RSVP({
-    name: req.body.name,
-    attending: req.body.attending,
-    count: req.body.count
+    name,
+    attending,
+    count
   });
 
    rsvp.save(function (err, rsvp) {
@@ -49,7 +55,9 @@ app.post('/rsvp', function (req, res) {
    res.sendFile(path.join(__dirname + '/public/confirm.html'));
 });
 
- var server = app.listen(8081, function () {
+const port = process.env.PORT || 8081;
+
+ var server = app.listen(port, function () {
     var host = server.address().address;
     var port = server.address().port;
     console.log("app listening at http://%s:%s", host, port);
