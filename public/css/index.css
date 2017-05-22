@@ -23,6 +23,9 @@
   .whiteHeader{
     font-size: 370%;
   }
+  iframe{
+  display: none;
+  }
 
 }
 
