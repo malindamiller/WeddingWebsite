@@ -23,8 +23,8 @@
   .whiteHeader{
     font-size: 370%;
   }
-  iframe{
-  display: none;
+  .image_map_holder{
+    visibility:hidden
   }
 
 }
