@@ -1,29 +1,36 @@
-@media (max-width: 840px) {
-  .map {
-    flex-flow:column wrap;
-  }
-  .image_map_holder{
-    flex-flow:column wrap;
-  }
-  .addressDiv {
-    width: 100% !important;
-  }
-  .address {
-    width: 100% !important;
-  }
-  #storyFont {
-    font-size: 60% !important;
-  }
-  #bridesmaidText {
-    font-size: 250%;
-  }
-  .blueHeader{
-    font-size: 370%
-  }
-  .whiteHeader{
-    font-size: 370%;
-  }
+.topnav {
+    background-color: #29487a;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: +1;
+    border-style: solid;
+    border-color:  #29487a;
+    border-bottom-width: 1px;
+    border-bottom-color:  #fff
+}
 
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: #29487a;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
 }
 
 ul {
@@ -41,19 +48,11 @@ li {
     margin-right: 20px;
     list-style-type: none;
 }
-.headerlink {
-}
-#indexBody{
-  background-color: #f2f2f2;
-
-}
-#rsvpButton{
-  margin-left: 1%;
+form {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-#link {
-  color: #adccff;
-}
 .headerIndex {
   background-repeat: no-repeat;
   background-size: 100%;
@@ -65,23 +64,11 @@ li {
   text-align: center;
   color: white;
   font-size: 6vw;
+  margin: 0 !important;
 }
 .address {
   padding-left: 5%;
   color: white;
-}
-#photos {
-  padding-top: 52px;
-}
-#story {
-  padding-top: 25px;
-  padding: 10px;
-  margin-left: 3px;
-}
-
-#links {
-  padding-left: 30px;
-  padding-bottom: 10px;
 }
 .whiteHeader {
   padding: 2%;
@@ -113,9 +100,6 @@ li {
 .whiteDivFloat{
   clear: both
 }
-#bridalParty{
-  padding-top: 55px;
-}
 .weddingPartyImage {
   width: 30%;
   /*padding-left: 2%;*/
@@ -124,6 +108,60 @@ li {
   padding-right: 5%;
   padding-left: 5%;
 }
+.bridesmaidFont {
+  margin-left: 1%;
+  font-family: 'Cedarville Cursive', cursive;
+  text-align: left;
+  color: white;
+  font-size: 200%;
+}
+.image_map_holder{
+  display: flex;
+  width: 70%;
+}
+.addressDiv {
+  width: 30%
+}
+.title {
+  text-align: center;
+  color: white;
+
+}
+.map {
+  flex-wrap: wrap;
+  margin-left: 10%;
+  display: flex
+}
+#indexBody{
+  background-color: #f2f2f2;
+
+}
+#rsvpButton{
+  margin-left: 1%;
+}
+
+#link {
+  color: #adccff;
+}
+
+#photos {
+  padding-top: 52px;
+}
+#story {
+  padding-top: 25px;
+  padding: 10px;
+  margin-left: 3px;
+}
+
+#links {
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+#bridalParty{
+  padding-top: 55px;
+}
+
 #weddingDetails {
   padding-top: 55px;
 }
@@ -134,13 +172,6 @@ li {
   padding-right: 5%;
   padding-bottom: 2px;
   margin: 3px;
-}
-.bridesmaidFont {
-  margin-left: 1%;
-  font-family: 'Cedarville Cursive', cursive;
-  text-align: left;
-  color: white;
-  font-size: 200%;
 }
 
 #bridesmaidText{
@@ -155,16 +186,6 @@ li {
   padding-left: 10%;
   padding-bottom: 2%;
 }
-.title {
-  text-align: center;
-  color: white;
-
-}
-.map {
-  flex-wrap: wrap;
-  margin-left: 10%;
-  display: flex
-}
 #confirm {
   color: white;
 }
@@ -172,36 +193,59 @@ li {
   background-color: white;
   color: #29487a;
 }
-form {
-  padding-left: 10%;
-  padding-right: 10%;
-}
+
 #nameInput {
   width: 30%
 }
-.image_map_holder{
-  display: flex;
-  width: 70%;
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
 }
-.addressDiv {
-  width: 30%
-}
-header {
-    background-color: #29487a;
-    position: fixed;
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
     top: 0;
-    width: 100%;
-    margin: 0 auto;
-    z-index: 100;
-    height: 35px;
-    padding-top: 15px;
-    padding-bottom: 35px;
-    min-width: 675px;
-    border:1px solid #29487a;
-    border-width:1px 0;
-    border-bottom: 1px solid #dbdddf;
-    box-shadow: 0 0 0.7em rgba(0,5,10,0.15)
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
-header a {
-  color: #fff;
+
+@media (max-width: 840px) {
+  .map {
+    flex-flow:column wrap;
+  }
+  .image_map_holder{
+    flex-flow:column wrap;
+  }
+  .addressDiv {
+    width: 100% !important;
+  }
+  .address {
+    width: 100% !important;
+  }
+  #storyFont {
+    font-size: 60% !important;
+  }
+  #bridesmaidText {
+    font-size: 250%;
+  }
+  .blueHeader{
+    font-size: 370%
+  }
+  .whiteHeader{
+    font-size: 370%;
+  }
+
 }
