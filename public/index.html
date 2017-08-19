@@ -12,15 +12,6 @@
     <script type="text/javascript"></script>
   </head>
   <body id="indexBody">
-    <!-- <header id="navigation">
-      <ul>
-        <li><a class="headerlink" href="#headerRSVP">RSVP</a></li>
-        <li><a href="#weddingDetails">Wedding Details</a></li>
-        <li><a href="#photos">Engagement Photos</a></li>
-        <li><a href="#bridalParty">Bridal Party</a></li>
-        <li><a href="#story">Our Story</a></li>
-      </ul>
-    </header> -->
     <div class="topnav" id="myTopnav">
       <a href="#headerRSVP">RSVP</a>
       <a href="#weddingDetails">Wedding Details</a>
@@ -163,15 +154,6 @@
       <a href="images/Final8.jpg" title="" data-gallery>
           <img src="images/Final8.jpg" alt="three" style= "width: 14%">
       </a>
-      <a href="images/Final10-2.jpg" title="" data-gallery>
-          <img src="images/Final10-2.jpg" alt="four" style= "width: 14%">
-      </a>
-      <a href="images/Final11-2.jpg" title="" data-gallery>
-          <img src="images/Final11-2.jpg" alt="five" style= "width: 14%">
-      </a>
-      <a href="images/Final12.jpg" title="" data-gallery>
-          <img src="images/Final12.jpg" alt="three" style= "width: 14%">
-      </a>
       <a href="images/Final5.jpg" title="" data-gallery>
           <img src="images/Final5.jpg" alt="three" style= "width: 14%">
       </a>
@@ -202,14 +184,14 @@
         <a href="images/cuddles.jpg" title="" data-gallery>
             <img src="images/cuddles.jpg" alt="five" style= "width: 14%">
         </a>
-        <a href="images/niagara.jpg" title="Niagara Falls" data-gallery>
-            <img src="images/niagara.jpg" alt="six" style= "width: 14%">
+        <a href="images/GrandPlace.jpg" title="Grand Place Brussels" data-gallery>
+            <img src="images/GrandPlace.jpg" alt="six" style= "width: 14%">
         </a>
         <a href="images/psu.jpg" title="Penn State student section" data-gallery>
             <img src="images/psu.jpg" alt="seven" style= "width: 14%">
         </a>
-        <a href="images/bulls.jpg" title="Durham Bulls AAA baseball" data-gallery>
-            <img src="images/bulls.jpg" alt="eight" style= "width: 14%">
+        <a href="images/Tomorrowland.jpg" title="Tomorrowland Belgium" data-gallery>
+            <img src="images/Tomorrowland.jpg" alt="eight" style= "width: 14%">
         </a>
         <a href="images/restaurant.jpg" title="" data-gallery>
             <img src="images/restaurant.jpg" alt="nine" style= "width: 14%">
@@ -270,43 +252,41 @@
     <script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
     <script src="bootstrap/js/bootstrap-image-gallery.min.js"></script>
     <script>
-    document.getElementById('links').onclick = function (event) {
-      event = event || window.event;
-      var target = event.target || event.srcElement,
-          link = target.src ? target.parentNode : target,
-          options = {index: link, event: event, hidePageScrollbars: false},
-          links = this.getElementsByTagName('a');
-      blueimp.Gallery(links, options);
-  };
-  $("#numberInput").keyup(function() {
-    if($("#numberInput").val()!=count){
-    var count = $("#numberInput").val();
-        $( '.name').remove();
-    }
-
-    if(count > 0 && count < 20){
-      for(var i =0; i<count; i++){
-        $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
-        $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name', placeholder: "Attendee Name"}).appendTo('#group');
+      document.getElementById('links').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event, hidePageScrollbars: false},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+      };
+      $("#numberInput").keyup(function() {
+        if($("#numberInput").val()!=count){
+          var count = $("#numberInput").val();
+            $( '.name').remove();
+          }
+        if(count > 0 && count < 20){
+          for(var i =0; i<count; i++){
+            $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
+            $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name', placeholder: "Attendee Name"}).appendTo('#group');
+          }
+        }
+      });
+      $("#form").submit(function() {
+        $.post("/rsvp", $("#form").serialize())
+        .done(function(data) {
+          $('#confirm').html("Your RSVP has been submitted, Thank you!");
+        });
+        return false;
+      });
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
       }
-    }
-  });
-  $("#form").submit(function() {
-    $.post("/rsvp", $("#form").serialize())
-    .done(function(data) {
-      $('#confirm').html("Your RSVP has been submitted, Thank you!");
-    });
-    return false;
-  });
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
-
+  </script>
 </body>
 </html>
