@@ -70,6 +70,10 @@ form {
   padding-left: 5%;
   color: white;
 }
+.hotel {
+  padding-left: 5%;
+  color: #29487a;
+}
 .whiteHeader {
   padding: 2%;
   font-family: 'Cedarville Cursive', cursive;
@@ -119,17 +123,29 @@ form {
   display: flex;
   width: 70%;
 }
+.image_holder{
+  display: flex;
+  width: 40%;
+}
 .addressDiv {
   width: 30%
 }
+.hotelDiv {
+  width: 45%;
+  padding-left: 5%;
+}
 .title {
   text-align: center;
-  color: white;
+  color: #29487a;
 
 }
 .map {
   flex-wrap: wrap;
   margin-left: 10%;
+  display: flex
+}
+.hotel_flex {
+  flex-wrap: wrap;
   display: flex
 }
 #indexBody{
