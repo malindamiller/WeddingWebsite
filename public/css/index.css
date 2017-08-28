@@ -136,8 +136,11 @@ form {
 }
 .title {
   text-align: center;
-  color: #29487a;
+  color: white;
 
+}
+.title2 {
+  color: #29487a;
 }
 .map {
   flex-wrap: wrap;

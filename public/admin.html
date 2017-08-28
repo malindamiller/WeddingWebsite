@@ -4,6 +4,7 @@
     <link href="index.css" rel="stylesheet">
     </script>
     <script>
+      console.log('HELLO')
       var myApp = angular.module('wedding', []);
       myApp.controller('admin', function($scope, $http) {
         $scope.rsvpList =[];
@@ -21,9 +22,9 @@
                   $scope.totalAttending += rsvp.count;
                 }
               }
-              }, function errorCallback(response) {
-                console.log("error " + response);
-              });
+            }, function errorCallback(response) {
+              console.log("error " + response);
+            });
           }
       });
     </script>
@@ -31,9 +32,9 @@
   <body ng-app="wedding" >
     <h1>Guests that have RSVP'd</h1>
     <div ng-controller="admin" ng-init="getRSVP()">
-      <div ng-repeat="rsvp in rsvpList">
+      <div ng-repeat="rsvp in rsvpList track by $index">
         {{rsvp.attending}} {{rsvp.count}}
-        <div ng-repeat="n in rsvp.name">{{n}}</h1>
+        <div ng-repeat="n in rsvp.name track by $index">{{n}}</h1>
       </div>
       <hr>
     </div>
