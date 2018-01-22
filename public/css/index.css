@@ -93,6 +93,9 @@ form {
   color: #29487a;
   font-size: 270%;
 }
+#travelHeader{
+  font-size: 120% !important;
+}
 .blueDiv{
   background-color: #29487a;
   float: right;
@@ -109,6 +112,8 @@ form {
 .whiteDivFloat{
   clear: both
 }
+
+
 .weddingPartyImage {
   width: 30%;
   /*padding-left: 2%;*/
