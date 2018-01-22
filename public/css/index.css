@@ -93,9 +93,6 @@ form {
   color: #29487a;
   font-size: 270%;
 }
-#travelHeader{
-  font-size: 120% !important;
-}
 .blueDiv{
   background-color: #29487a;
   float: right;
@@ -202,7 +199,14 @@ form {
   padding-bottom: 2px;
   margin: 3px;
 }
-
+#parkingFont {
+  font-size: 130%;
+  color: #29487a;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2px;
+  margin: 3px;
+}
 #bridesmaidText{
   font-size: 120%;
   color: white;
@@ -266,6 +270,9 @@ form {
   }
   #storyFont {
     font-size: 60% !important;
+  }
+  #storyFont {
+    font-size: 140% !important;
   }
   #bridesmaidText {
     font-size: 250%;
