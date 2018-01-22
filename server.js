@@ -23,6 +23,9 @@ app.get('/', function (req, res) {
 app.get('/rsvp', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/index.html'));
 });
+app.get('/hotels', function (req, res) {
+  res.sendFile(path.join(__dirname + '/public/index.html'));
+});
 app.get('/admin', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/admin.html'));
 });
@@ -54,7 +57,9 @@ app.post('/rsvp', function (req, res) {
    });
    res.sendFile(path.join(__dirname + '/public/confirm.html'));
 });
-
+app.get('*', function(req, res){
+  res.sendFile(path.join(__dirname + '/public/index.html'));
+});
 const port = process.env.PORT || 8081;
 
  var server = app.listen(port, function () {
