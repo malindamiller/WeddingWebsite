@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
   res.sendFile('index.html');
 });
 app.get('/rsvp', function (req, res) {
-  res.sendFile(path.join(__dirname + '/public/rsvp.html'));
+  res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 app.get('/admin', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/admin.html'));

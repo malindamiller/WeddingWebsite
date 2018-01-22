@@ -289,6 +289,15 @@
     <script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
     <script src="bootstrap/js/bootstrap-image-gallery.min.js"></script>
     <script>
+    $( document ).ready(function() {
+      var pathname = window.location.pathname
+      var pathLower = pathname && pathname.toLowerCase();
+
+      if(pathLower && pathLower.indexOf('/rsvp') > -1)
+        window.location.href = '#headerRSVP'
+        //document.getElementById('headerRSVP').scrollIntoView()
+    });
+
       document.getElementById('links').onclick = function (event) {
         event = event || window.event;
         var target = event.target || event.srcElement,
