@@ -297,6 +297,17 @@
     <script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
     <script src="bootstrap/js/bootstrap-image-gallery.min.js"></script>
     <script>
+    function createRsvpInputs () {
+      var rsvpInputCount = $("#numberInput").val();
+
+      if (rsvpInputCount && rsvpInputCount < 20) {
+        for(var i =0; i<rsvpInputCount; i++){
+          $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
+          $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name', placeholder: "Attendee Name"}).appendTo('#group');
+        }
+      }
+    }
+
     $( document ).ready(function() {
       var pathname = window.location.pathname
       var pathLower = pathname && pathname.toLowerCase();
@@ -306,6 +317,8 @@
       if(pathLower && pathLower.indexOf('/hotels') > -1)
           window.location.href = '#accomodations'
         //document.getElementById('headerRSVP').scrollIntoView()
+
+      createRsvpInputs();
     });
 
       document.getElementById('links').onclick = function (event) {
@@ -319,14 +332,10 @@
       $("#numberInput").keyup(function() {
         if($("#numberInput").val()!=count){
           var count = $("#numberInput").val();
-            $( '.name').remove();
-          }
-        if(count > 0 && count < 20){
-          for(var i =0; i<count; i++){
-            $('<br/>').attr({ id: 'nameInput' + i, class: 'form-control name'}).appendTo('#group');
-            $('<input/>').attr({ name: 'name', type: 'text', id: 'nameInput' + i, class: 'form-control name', placeholder: "Attendee Name"}).appendTo('#group');
-          }
+          $( '.name').remove();
         }
+
+        createRsvpInputs();
       });
       $("#form").submit(function() {
         var submit = true
@@ -339,6 +348,10 @@
           $.post("/rsvp", $("#form").serialize())
           .done(function(data) {
             $('#confirm').html("Your RSVP has been submitted, Thank you!");
+          })
+          .error(function(error) {
+            console.error('Error submitting RSVP: ', error)
+            $('#confirm').html('Error submitting RSVP.`` Please call Malinda.');
           });
         }
         else{

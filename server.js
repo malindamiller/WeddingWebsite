@@ -6,6 +6,10 @@ var mongoose = require('mongoose');
 var RSVP = require('./RSVP.js');
 const sanitize = require('mongo-sanitize');
 
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught execption', err);
+});
+
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
@@ -51,15 +55,22 @@ app.post('/rsvp', function (req, res) {
   });
 
    rsvp.save(function (err, rsvp) {
-     if(err) {
-       return next(err);
+     if (err) {
+       console.error('Error saving rsvp', err);
+
+       return res.status(500).send({
+         error: 'Error saving RSVP'
+       });
      }
+
+     res.status(200).send();
    });
-   res.sendFile(path.join(__dirname + '/public/confirm.html'));
 });
+
 app.get('*', function(req, res){
   res.sendFile(path.join(__dirname + '/public/index.html'));
 });
+
 const port = process.env.PORT || 8081;
 
  var server = app.listen(port, function () {
